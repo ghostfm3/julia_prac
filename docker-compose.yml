@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    image: julia-python-app
+    volumes:
+      - ./src:/app
+    command: /bin/bash
+    stdin_open: true
+    tty: true
