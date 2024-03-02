@@ -12,10 +12,10 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Python パッケージのインストール
-RUN pip install numpy pandas 
+RUN pip install -r requirements.txt
 
 # Julia パッケージのインストール
-RUN julia -e 'using Pkg; Pkg.add("PyCall"); Pkg.add("IJulia")'
+RUN julia -e 'using Pkg; Pkg.add("PyCall"); Pkg.add("IJulia"); Pkg.add("PyPlot"); Pkg.add("Distributions")'
 
 # srcディレクトリをコピー
 COPY ./src /app
