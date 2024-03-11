@@ -23,6 +23,4 @@ function main()
     savefig("norm.png")
 end
 
-if abspath(PROGRAM_FILE) == abspath(@__FILE__)
-    main()
-end
+abspath(PROGRAM_FILE) == abspath(@__FILE__) && main()

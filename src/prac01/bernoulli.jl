@@ -36,6 +36,4 @@ function main()
                 gridy=true)
 end
 
-if abspath(PROGRAM_FILE) == abspath(@__FILE__)
-    main()
-end
+abspath(PROGRAM_FILE) == abspath(@__FILE__) && main()
