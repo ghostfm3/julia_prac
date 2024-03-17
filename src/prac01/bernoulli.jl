@@ -1,5 +1,7 @@
+module SetOptions
 using Distributions
 using PyPlot
+
 
 function set_options(ax, xlabel, ylabel, title, filename;
                     grid=true, gridy=false, legend=false)
@@ -17,6 +19,7 @@ function set_options(ax, xlabel, ylabel, title, filename;
     legend && ax.legend()
     savefig("$(filename).png")
 end
+end #module
 
 function main()
     # 分布作成

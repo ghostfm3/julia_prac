@@ -12,6 +12,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Python パッケージのインストール
+COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # Julia パッケージのインストール
