@@ -1,4 +1,4 @@
-include("../prac01/bernoulli.jl")
+include("../../prac01/bernoulli/bernoulli.jl")
 
 using .SetOptions
 using Distributions
