@@ -40,7 +40,7 @@ end
 function main()
     epoch = 40
     lr = 0.01
-    p = param([0.1f0])  # Knet.param から param に変更
+    p = param([0.1f0])  
     logs = zeros(0,3)
     
     pram = Pram(epoch, lr, p, logs)
