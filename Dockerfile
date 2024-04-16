@@ -16,7 +16,7 @@ COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # Julia パッケージのインストール
-RUN julia -e 'using Pkg; Pkg.add("PyCall"); Pkg.add("IJulia"); Pkg.add("PyPlot"); Pkg.add("Distributions"); Pkg.add("SpecialFunctions")'
+RUN julia -e 'using Pkg; Pkg.add("PyCall"); Pkg.add("IJulia"); Pkg.add("PyPlot"); Pkg.add("Distributions"); Pkg.add("SpecialFunctions"); Pkg.add("Flux")'
 
 # srcディレクトリをコピー
 COPY ./src /app
